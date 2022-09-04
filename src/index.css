@@ -59,6 +59,7 @@ body {
 
 .tituloCalculadora{
   text-align: center;
+  font-weight: bold;
 }
 
 .campos{
@@ -102,4 +103,9 @@ body {
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 4px red;
+}
+
+.apiGIF{
+  text-align: center;
+  margin-top: 20px;
 }

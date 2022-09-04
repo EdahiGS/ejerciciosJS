@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
 
 function Galeria() {
   const [index, setIndex] = useState(0);
@@ -51,4 +51,4 @@ function Galeria() {
   );
 }
 
-export default Galeria
+export default Galeria;
