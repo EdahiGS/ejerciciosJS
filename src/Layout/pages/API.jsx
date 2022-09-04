@@ -9,14 +9,15 @@ const API = () => {
   HttpCall.then((resp) => resp.json()).then(({ data }) => {
     const enlace = data.images.original.url;
     const imagen = document.querySelector(".gifs");
-    imagen.src = enlace;
+    imagen.src = 'https://media3.giphy.com/media/mSt8cRRKKUAzibsl7m/giphy.gif?cid=5dc2b755caa0df4d49840defa1758fc97287ff5ccbc1c0a6&rid=giphy.gif&ct=g';
   });
+
   return (
     <>
       <div>
         <h1 className="tituloCalculadora">API GIF´S</h1>
         <div className="apiGIF">
-          <img className="gifs " src="" alt="" /> 
+          <img className="gifs " src="" alt="" />
           <p className="tituloCalculadora">USANDO GIPHY</p>
         </div>
       </div>
