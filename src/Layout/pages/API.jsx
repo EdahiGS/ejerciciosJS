@@ -9,7 +9,7 @@ const API = () => {
   HttpCall.then((resp) => resp.json()).then(({ data }) => {
     const enlace = data.images.original.url;
     const imagen = document.querySelector(".gifs");
-    imagen.src = 'https://media3.giphy.com/media/mSt8cRRKKUAzibsl7m/giphy.gif?cid=5dc2b755caa0df4d49840defa1758fc97287ff5ccbc1c0a6&rid=giphy.gif&ct=g';
+    imagen.src = enlace;
   });
 
   return (
