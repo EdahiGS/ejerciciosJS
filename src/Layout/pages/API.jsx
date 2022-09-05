@@ -1,7 +1,7 @@
 import React from "react";
 
 const API = () => {
-  const api_key = process.env.REACT_APP_API_KEY;
+  const api_key = "q4ztbSSk5kcxdgLDkT6dgLRwOI10akh7";
   const HttpCall = fetch(
     `http://api.giphy.com/v1/gifs/random?api_key=${api_key}`
   );
@@ -11,7 +11,7 @@ const API = () => {
     const imagen = document.querySelector(".gifs");
     imagen.src = enlace;
   });
-  
+ 
   return (
     <>
       <div>
