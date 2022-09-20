@@ -1,26 +1,26 @@
 import { useState, useEffect } from "react";
+import { responsivePropType } from "react-bootstrap/esm/createUtilityClasses";
 import ApiCard from "../components/ApiCard";
 
 const API = () => {
   const [imagenes, setImagenes] = useState([]);
 
-  const api_key = "q4ztbSSk5kcxdgLDkT6dgLRwOI10akh7";
-  const category = "Valorant";
-  const HttpCall = `http://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${category}&limit=15`;
+  const getGifs = async () => {
+    const api_key = "q4ztbSSk5kcxdgLDkT6dgLRwOI10akh7";
+    const category = "Valorant";
+    const url = `http://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${category}&limit=15`;
 
-  const Respuesta = fetch(HttpCall);
+    const resp = await fetch(url);
+    const { data } = await resp.json();
 
-  const getGifs = () => {
-    Respuesta.then((resp) => resp.json()).then(({ data }) => {
-      const gifs = data.map((data) => {
-        return {
-          url: data.images.downsized_medium.url,
-          id: data.id,
-        };
-      });
-
-      setImagenes(gifs);
+    const gifs = data.map((data) => {
+      return {
+        url: data.images.downsized_medium.url,
+        id: data.id,
+      };
     });
+
+    setImagenes(gifs);
   };
 
   useEffect(() => {
